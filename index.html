@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>LentheraGlass | Aplikasi Bisnis Kaca Patri Digital</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(circle at top, #2b0a3d, #05010a);
+            color: #ffffff;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+            background: linear-gradient(90deg, #05010a, #05010acc);
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #ffbe0b;
+        }
+
+        .logo span {
+            color: #ffffff;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .nav-menu a:hover {
+            color: #ffbe0b;
+        }
+
+        .content {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 120px 20px;
+        }
+
+        .content.active {
+            display: flex;
+        }
+
+        .card {
+            background: linear-gradient(180deg, #05010a, #12021f);
+            padding: 70px 80px;
+            border-radius: 22px;
+            text-align: center;
+            max-width: 950px;
+            box-shadow:
+                0 0 60px rgba(255, 190, 11, 0.25),
+                inset 0 0 25px rgba(255, 190, 11, 0.15);
+        }
+
+        .card h1 {
+            font-size: 40px;
+            margin-bottom: 25px;
+        }
+
+        .card h1 span {
+            color: #ffbe0b;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #e5e5e5;
+            margin-bottom: 18px;
+            line-height: 1.6;
+        }
+
+        .product-list {
+            text-align: left;
+            margin-top: 30px;
+        }
+
+        .product-item {
+            background: rgba(255, 190, 11, 0.08);
+            border-left: 4px solid #ffbe0b;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+
+        .product-item h3 {
+            color: #ffbe0b;
+            margin-bottom: 8px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 14px 40px;
+            background: linear-gradient(90deg, #ffbe0b, #fb5607);
+            color: #05010a;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 0 25px rgba(255, 190, 11, 0.9);
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .card {
+                padding: 45px 30px;
+            }
+
+            .card h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">Lenthera<span>Glass</span></div>
+    <ul class="nav-menu">
+        <li><a onclick="showSection('home')">Home</a></li>
+        <li><a onclick="showSection('masalah')">Masalah</a></li>
+        <li><a onclick="showSection('target')">Target Pasar</a></li>
+        <li><a onclick="showSection('solusi')">Solusi</a></li>
+        <li><a onclick="showSection('produk')">Produk</a></li>
+    </ul>
+</nav>
+
+<section id="home" class="content active">
+    <div class="card">
+        <h1>
+            Hidupkan Ruang dengan<br>
+            <span>Seni Kaca Patri Digital</span>
+        </h1>
+        <p>
+            LentheraGlass adalah aplikasi bisnis produk digital yang
+            menghubungkan pelanggan dengan pengrajin kaca patri
+            melalui visualisasi dan pemesanan berbasis digital.
+        </p>
+        <a class="btn" onclick="showSection('produk')">Lihat Produk</a>
+    </div>
+</section>
+
+<section id="masalah" class="content">
+    <div class="card">
+        <h1><span>Masalah</span></h1>
+        <p>
+            Banyak calon pelanggan kesulitan membayangkan hasil akhir
+            kaca patri sebelum diproduksi. Selain itu, akses terhadap
+            pengrajin kaca patri profesional masih terbatas dan tidak terintegrasi
+            secara digital.
+        </p>
+        <p>
+            Kondisi ini menyebabkan proses pemesanan tidak efisien dan
+            berisiko tidak sesuai dengan ekspektasi pelanggan.
+        </p>
+    </div>
+</section>
+
+<section id="target" class="content">
+    <div class="card">
+        <h1><span>Target Pasar</span></h1>
+        <p>
+            Target pengguna utama LentheraGlass adalah pemilik rumah,
+            arsitek, desainer interior, pengelola hotel, tempat ibadah,
+            serta institusi dan UMKM yang membutuhkan kaca patri
+            sebagai elemen dekoratif bangunan.
+        </p>
+        <p>
+            Aplikasi digital dipilih karena mampu menjangkau pengguna
+            secara luas, menyediakan visualisasi desain, serta
+            mempermudah proses pemesanan.
+        </p>
+    </div>
+</section>
+
+<section id="solusi" class="content">
+    <div class="card">
+        <h1><span>Solusi & Fitur Unggulan</span></h1>
+        <p>Visualisasi desain kaca patri berbasis digital</p>
+        <p>Kustomisasi motif, warna, dan ukuran sesuai kebutuhan</p>
+        <p>Konsultasi langsung dengan pengrajin profesional</p>
+        <p>Platform terintegrasi dari desain hingga pemesanan</p>
+    </div>
+</section>
+
+<section id="produk" class="content">
+    <div class="card">
+        <h1><span>Produk Bisnis Digital</span></h1>
+        <p>
+            <b>Nama Produk:</b> LentheraGlass Platform<br>
+            <b>Jenis Produk:</b> Kaca Patri
+        </p>
+
+        <div class="product-list">
+            <div class="product-item">
+                <h3>Kaca Patri Jendela</h3>
+                <p>Desain kaca patri artistik untuk jendela rumah dan bangunan komersial.</p>
+            </div>
+            <div class="product-item">
+                <h3>Kaca Patri Pintu</h3>
+                <p>Kaca patri elegan untuk pintu utama dengan desain eksklusif.</p>
+            </div>
+            <div class="product-item">
+                <h3>Panel Dekoratif Interior</h3>
+                <p>Panel kaca patri untuk dinding dan partisi interior.</p>
+            </div>
+        </div>
+
+        <a class="btn" 
+            href="https://wa.me/628818611766?text=Halo%20saya%20ingin%20daftar%20produk%20LentheraGlass" 
+            target="_blank">
+            Daftar Sekarang
+        </a>
+
+    </div>
+</section>
+
+<script>
+    function showSection(id) {
+        document.querySelectorAll('.content').forEach(section => {
+            section.classList.remove('active');
+        });
+        document.getElementById(id).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
